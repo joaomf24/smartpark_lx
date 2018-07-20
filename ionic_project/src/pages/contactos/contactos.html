@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="main">
+    <button ion-button menuToggle >
+      <ion-icon name="menu" ></ion-icon>  
+    </button>
+    <ion-title>{{'CONTATOS' | translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-image: url('assets/img/fundo.png');">
+  <div>
+      <img src="assets/img/logo.png" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+    </div>
+  <ion-list>
+    <ion-item (click)="onPhone()">
+      {{ phone_num }}
+      <ion-icon class="phone" name="call" item-left></ion-icon>
+    </ion-item>
+    <ion-item (click)="onEmail()">      
+      {{ email }}
+      <ion-icon class="email" name="mail" item-left></ion-icon>
+    </ion-item>   
+  </ion-list>
+</ion-content>

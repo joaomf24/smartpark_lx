@@ -1,0 +1,56 @@
+<ion-menu [content]="nav">
+  <ion-content>
+    <div style="background-image: url('assets/img/banner.png'); height:130px; border-width: 2px;
+    border-bottom: 5px #149403 solid; margin-bottom:10px;">
+      <ion-grid style="height:100%;">
+        <ion-row style="height:100%;">
+          <ion-col col-4 style="display: flex;
+          justify-content: center;">
+              <ion-avatar class="avatar" >
+                  <img style="height:auto; width:auto;" [src]="perfil.avatar">
+              </ion-avatar>
+          </ion-col>
+          <ion-col style=" display: flex; align-self:center;  ">
+              <h5 style="color: white;">{{perfil.nome}}</h5> 
+          </ion-col>
+        </ion-row>
+      </ion-grid>     
+    </div>
+    <ion-list style="padding-left: 10px;">     
+      <ion-item  menuClose="" on-click="goToPerfil()">
+        <ion-icon color="grayDark" name="person" item-left></ion-icon>
+        <p class="item_text">{{'PERFIL' | translate}}</p>
+      </ion-item>
+      <ion-item  menuClose="" on-click="goToMatriculas()">
+        <ion-icon color="grayDark" name="barcode" item-left></ion-icon>
+        <p class="item_text">{{'GERIR_MATRICULAS' | translate}}</p>
+      </ion-item>
+      <ion-item  menuClose="" on-click="goToFavoritos()">
+        <ion-icon color="grayDark" name="star" item-left></ion-icon>
+        <p class="item_text">{{'FAVORITOS' | translate}}</p>
+      </ion-item>
+      <ion-item  menuClose="" on-click="goToHistorico()">
+        <ion-icon color="grayDark" name="list" item-left></ion-icon>
+        <p class="item_text">{{'HISTORICO' | translate}}</p>
+      </ion-item>
+      <ion-item  menuClose="" on-click="goToInformacoes()">
+        <ion-icon color="grayDark" name="information-circle" item-left></ion-icon>
+        <p class="item_text">{{'INFORMACOES' | translate}}</p>
+      </ion-item>
+      <ion-item  menuClose="" on-click="goToDefinicoes()">
+        <ion-icon color="grayDark" name="settings" item-left></ion-icon>
+        <p class="item_text">{{'DEFINICOES' | translate}}</p>
+      </ion-item>
+      <ion-item  menuClose="" on-click="goToContactos()">
+        <ion-icon color="grayDark" name="contacts" item-left></ion-icon>
+        <p class="item_text">{{'CONTATOS' | translate}}</p>
+      </ion-item>
+      <ion-item  menuClose="" on-click="logout()">
+        <ion-icon color="grayDark" name="exit" item-left></ion-icon>
+        <p class="item_text">{{'LOGOUT' | translate}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #nav [root]="rootPage"></ion-nav>

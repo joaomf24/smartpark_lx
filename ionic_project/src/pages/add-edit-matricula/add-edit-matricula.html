@@ -1,0 +1,24 @@
+<ion-header>  
+    <ion-navbar color="main">
+      <ion-title>{{mode_text}} {{'MATRICULA' | translate}}</ion-title>
+      <ion-buttons end >
+        <button ion-button [disabled]="!matriculaForm.valid" (click)="onSubmit()">{{'GRAVAR' | translate}}</button>    
+        </ion-buttons>    
+    </ion-navbar>  
+  </ion-header>  
+  
+  <ion-content padding style="background-color: #eeeeee;">
+    <form [formGroup]="matriculaForm" (ngSubmit)="onSubmit()">
+      <ion-list>
+        <ion-item>
+          <ion-label floating>{{'MATRICULA' | translate}}</ion-label>          
+          <ion-input formControlName="matricula" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>{{'DESCRICAO' | translate}}</ion-label>
+          <ion-input formControlName="descricao" type="text"></ion-input>          
+        </ion-item>        
+      </ion-list>      
+    </form>
+  </ion-content>
+  
