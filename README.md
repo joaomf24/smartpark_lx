@@ -1,4 +1,4 @@
-# smartpark_lx
+# SmartPark Lx
 
 Hello friends!
 
