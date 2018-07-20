@@ -11,3 +11,5 @@ The goal is to provide some "ingredients" for you to build your own prototype or
 Great coding, everyone!
 
 JmF
+
+P.S: The 'node_modules', 'plugins' and 'platforms' folders are not included. Please be aware that you need to create your own Ionic project first and then you can include the source code in the right place!
